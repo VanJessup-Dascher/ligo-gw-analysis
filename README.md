@@ -1,25 +1,27 @@
-# ligo-gw-analysis
-Gravitational Wave Analysis - GW1501914
+# Reproducing GW150914 from LIGO Open Data
+Independent project reproducing the first direct detection of gravitational waves from raw LIGO strain data
 
-Reproducing the detection fo GW150914 using LIGO open data.
-Includes signal processing, matched filtering, and chirp mass extermination.
+**Author** Van Jessup-Dascher, Physics, University of Minnesota - Twin Cities
+**Started:** Summer 2026
 
-Author: Van Jessup-Dascher
-Summer 2026
+<img width="1176" height="926" alt="download" src="https://github.com/user-attachments/assets/2d6f25f9-77ce-4dea-8914-cea3113c20e1" />
 
-Project Goals:
-  - Detect GW150914 via matched filtering on LIGO strain data
-  - Estimate chirp mass from frequency evolution
-  - Produce publication-qaulity figures
+## Completed
+- Implemented the discrete Fourier transform from scratch to build intuition
+- Estimated detector noise (PSD) using Welch's method
+- Whitened H1 strain data using ASD with a Hann window
+- Applied a 35-350 Hz Butterworth bandpass filter, which reveals the GW150914 chirp
 
-Structure:
-  - notebooks/ - Juptyer notebooks for each analysis stage
-  - data/ strain data (not committed, see data access below)
-  - figures/ output plots
-  - writeup/ mini-paper PDF
+## In Progress
+- Matched filtering with pyCBC
+- Chirp mass estimation from the signal's frequency evolution
+- Publication-quality figures and a short paper-style writeup
 
-Dependencies
-numpy, scipy, matplotlib, gwpy, pycbc
+## Repository Structure 
+- 'notebooks/01_fourier_transform_basics.ipynb' : Fourier transform fundamentals
+- 'notebooks/02_gw150914_analysis.ipynb' : noise estimation, whitening, filtering
+- 'Figures' : Important plots and figures
 
-Data access
-Strain data from LIGO Open Science Center: gwosc.org
+## How To Run
+pip install numpy scipy matplotlib gwpy pycbc
+Data files are not committed; the notebooks download them directly
