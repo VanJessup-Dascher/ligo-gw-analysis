@@ -18,9 +18,9 @@ Independent project reproducing the first direct detection of gravitational wave
 - Publication-quality figures and a short paper-style writeup
 
 ## Repository Structure 
-- 'notebooks/01_fourier_transform_basics.ipynb' : Fourier transform fundamentals
-- 'notebooks/02_gw150914_analysis.ipynb' : noise estimation, whitening, filtering
-- 'Figures' : Important plots and figures
+- [`notebooks/01_fourier_transform_basics.ipynb`](notebooks/01_fourier_transform_basics.ipynb): Fourier transform fundamentals
+- [`notebooks/02_gw150914_analysis.ipynb`](notebooks/02_gw150914_analysis.ipynb): noise estimation, whitening, filtering
+- [`Figures/`](Figures/): important plots and figures
 
 ## How To Run
 pip install numpy scipy matplotlib gwpy pycbc
